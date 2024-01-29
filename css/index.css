@@ -1,7 +1,109 @@
-:root {
-  --clr-black: #231f20ff;
-  --clr-red: #d81159ff;
-  --clr-light: #cfdbd5ff;
-  --clr-gray: #a5b6acff;
-  --clr-blue: #0091adff;
+header {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-black);
+  padding-top: 0.5rem;
+  padding-bottom: 4rem;
+}
+
+.navbar {
+  background-color: var(--clr-black);
+  display: flex;
+  align-items: center;
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.navbar nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.navbar nav ul li a {
+  color: var(--clr-light);
+  font-weight: 600;
+  position: relative;
+}
+
+.navbar nav ul li a::before {
+  position: absolute;
+  content: "";
+  bottom: -10px;
+  left: 50%;
+  height: 2px;
+  width: 0;
+  background-color: var(--clr-red);
+  transition: left ease-out 200ms, width ease-out 200ms;
+}
+
+.navbar nav ul li a:hover::before {
+  left: 0%;
+  width: 100%;
+}
+
+.logo {
+  width: 80px;
+  margin-right: auto;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  width: 1400px;
+  margin: 0 auto;
+  gap: 2rem;
+  padding-top: 3rem;
+}
+
+.hero__right {
+  max-width: 1000px;
+  min-width: 600px;
+  flex: 1 1 auto;
+}
+
+.hero__right img {
+  width: 100%;
+  box-shadow: 2px 4px 100px 40px rgba(216, 17, 89, 0.5);
+}
+
+.hero__left {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__title {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 800;
+  font-size: 5rem;
+  line-height: 4.5rem;
+  letter-spacing: 0.005rem;
+  color: var(--clr-light);
+}
+
+.hero__subtitle {
+  margin-top: 1.5rem;
+  margin-bottom: 4rem;
+  font-size: 1.5rem;
+  letter-spacing: 0rem;
+  color: var(--clr-gray);
+  font-weight: 200;
+}
+
+.hero__btn-sign-up {
+  width: 150px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.5em 1em;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  background-color: var(--clr-red);
+  color: white;
+  transition: all ease 400ms;
+}
+
+.hero__btn-sign-up:hover {
+  border: 2px solid var(--clr-red);
+  color: var(--clr-red);
+  background-color: transparent;
 }
