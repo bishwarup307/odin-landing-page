@@ -147,18 +147,22 @@ header {
 
 .card-1 {
   background-color: var(--clr-card1);
+  color: var(--clr-card1);
 }
 
 .card-2 {
   background-color: var(--clr-card2);
+  color: var(--clr-card2);
 }
 
 .card-3 {
   background-color: var(--clr-card3);
+  color: var(--clr-card3);
 }
 
 .card-4 {
   background-color: var(--clr-card4);
+  color: var(--clr-card4);
 }
 
 .card__header {
@@ -187,8 +191,8 @@ header {
 }
 
 .btn-card {
+  position: relative;
   margin-top: auto;
-  background-color: transparent;
   font-size: 1rem;
   font-weight: 600;
   padding: 0.3em 0.8em;
@@ -198,13 +202,39 @@ header {
   transition: all ease 300ms;
   flex-basis: auto;
   width: 80%;
+  background-color: transparent;
+  overflow: hidden;
+  z-index: 1;
+  transition: all ease 300ms;
 }
 
 .btn-card:hover {
+  color: inherit;
+  font-weight: 600;
+}
+
+.btn-card::after {
+  position: absolute;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  content: "";
+  background: white;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: transform ease 300ms;
+  z-index: -1;
+}
+
+.btn-card:hover::after {
+  transform: skewX(-45deg) scale(1, 1);
+}
+
+/* .btn-card:hover {
   background-color: var(--clr-red);
   color: white;
   border: 1px solid transparent;
-}
+} */
 
 .testimonial {
   margin-top: 4rem;
