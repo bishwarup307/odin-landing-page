@@ -300,7 +300,7 @@ header {
 
 .cta__container {
     width: 1200px;
-    margin: 0 auto;
+    margin: 4rem auto;
     padding: 4rem 4rem;
     /* background-color: red; */
     background: linear-gradient(
@@ -342,4 +342,16 @@ header {
     background: var(--clr-red);
     border: 2px solid transparent;
     border-radius: 50px;
+}
+
+.footer {
+    margin-top: 4rem;
+    display: flex;
+    height: 80px;
+    background-color: var(--clr-black);
+    color: var(--clr-lightgray);
+    font-size: 0.7rem;
+    justify-content: center;
+    align-items: center;
+    border: none;
 }
